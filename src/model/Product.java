@@ -2,15 +2,17 @@ package model;
 
 public class Product {
 	
+	private static int initialId = 1; 
 	private int id;
 	private String name;
 	private Double price;
 	
 	
-	public Product (int id, String name, Double price) {
-		this.id = id;
+	public Product (String name, Double price) {
+		this.id = initialId;
 		this.name = name;
 		this.price = price;
+		Product.initialId += 1;
 	}
 	
 	public int getId () {
